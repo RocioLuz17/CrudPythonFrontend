@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Edición de articulo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style/estilos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header id="header">
+ 
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="card-header">
+        <h4>Edición de articulo</h4>
+      </div>
+      <div class="card-body">
+    <div class="container">
+        <form  style="background-color: whitesmoke;margin:10px auto ; width: 300px; padding: 20px;">
+       <div class="form-group">
+          <div class="mb-3">
+            <label for="id" class="form-label">Id:</label>
+            <input type="number" name="id" id="id" disabled class="form-control">
+          </div>
+          </div>
+          <div class="form-group">
+          <div class="mb-3">
+            <label for="serie" 
+            <label for="serie" class="form-label">N°Serie:</label>
+            <input type="number" name="serie" id="serie" class="form-control">
+          </div>
+          </div>
+          <div class="form-group">
+          <div class="mb-3">
+            <label for="precio" 
+            <label for="precio" class="form-label">Precio:</label>
+            <input type="number" name="precio" id="precio" class="form-control">
+          </div>
+          </div>
+          <div class="form-group">
+          <div class="mb-3">
+          <label for="descripcion" class="form-label">Descripción:</label>
+            <input type="text" name="descripcion" id="descripcion" class="form-control">
+          </div>
+          </div>
+          <div class="form-group">
+          <div class="mb-3">
+            <label for="stock" 
+            <label for="stock" class="form-label">Stock:</label>
+            <input type="number" name="stock" id="stock" class="form-control">
+          </div>
+          </div>
+
+         
+         <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="button" class="btn btn-secondary" onclick="editar()">Grabar</button>
+         </div>
+        </form>
+  </div>
+  </div>
+      </div>
+  
+
+
+  </main>
+  <footer id="footer">
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="./js/main.js"></script>
+  <script src="./js/articulo_editar.js"></script>
+</body>
+
+</html>
+

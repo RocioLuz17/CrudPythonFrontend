@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Listado de articulos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="style/estilos.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+    
+<div class="card">
+        <div id="app">
+            <br>
+            <div class="card-header">
+            <h4>Listado de articulos</h4>
+            </div>
+          
+<div class="card-body">
+     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a class="btn btn-primary" href="articulo_nuevo.html">+ Nuevo</a>
+                <a class="btn btn-secondary" href="index.html">Inicio</a>
+            
+</div>         
+   <br>
+            
+         <section v-if="error">Lo sentimos se produjo un error</section>
+            <section v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive" >
+                        <table class="table table-striped table-hover text-center"style="width:100%">
+                            <thead  class="table-secondary">
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">N° serie</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Stock</th>
+                                    <th scope="col">Acciones</th>
+                               
+                                </tr>
+                            </thead>
+                            <tbody class="justify-content-center">
+                                <tr v-for="articulo in articulos">
+                                    <td scope="row">{{articulo.id}}</td>
+                                    <td>{{articulo.serie}}</td>
+                                    <td>{{articulo.precio}}</td>
+                                    <td>{{articulo.descripcion}}</td>
+                                    <td>{{articulo.stock}}</td>
+
+                <td>
+            <button type="button" class="btn btn-danger" v-on:click="eliminar(articulo.id)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></button>
+
+            <a class="btn btn-warning":href="'articulo_editar.html?id='+ articulo.id+'&serie=' +articulo.serie+ '&precio='+articulo.precio+'&descipcion='+articulo.descripcion +  '&stock='+articulo.stock" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></a>
+
+
+        </td>
+               
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+            </div>
+            </div>
+        </div>
+        </div>
+</div>
+    </main>
+    <footer id="footer">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="./js/main.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./js/listado.js"></script>
+</body>
+
+</html>
